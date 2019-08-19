@@ -62,6 +62,7 @@ RUN set -ex && \
 	ln -sf kubectx/completion/kubens.bash $COMPDIR/kubens && \
 	ln -sf kubectx/completion/kubectx.bash $COMPDIR/kubectx && \
   curl -L -o /usr/local/bin/stern https://github.com/wercker/stern/releases/download/${STERN_VERSION}/stern_linux_amd64 && \
+  chmod +x /usr/local/bin/stern && \
   wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
   wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_SHA256SUMS && \
   grep "terraform_${TERRAFORM_VERSION}_linux_amd64.zip" terraform_${TERRAFORM_VERSION}_SHA256SUMS > terraform_${TERRAFORM_VERSION}_linux_amd64.zip_SHA256SUM && \
