@@ -1,3 +1,4 @@
+
 variable "common" {
   type = "map"
   default = {
@@ -36,7 +37,7 @@ variable "vpc" {
 variable "gke" {
   type = "map"
   default = {
-    "k8s_version" = "1.13.7-gke.8"
+    "k8s_version" = "1.13.7-gke.19"
   }
 }
   
